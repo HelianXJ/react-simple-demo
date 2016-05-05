@@ -1,0 +1,39 @@
+{
+  "name": "react-simple-demo",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "start": "watchify --debug --extension=js -o bundle.js index.js & python -m SimpleHTTPServer"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/HelianXJ/react-simple-demo.git"
+  },
+  "keywords": [
+    "redux",
+    "react"
+  ],
+  "author": "doris",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/HelianXJ/react-simple-demo/issues"
+  },
+  "browserify": {
+    "transform": [
+      "babelify"
+    ]
+  },
+  "homepage": "https://github.com/HelianXJ/react-simple-demo#readme",
+  "dependencies": {
+    "react": "^0.14.0",
+    "react-dom": "^0.14.0",
+    "react-redux": "^3.1.0",
+    "redux": "^3.0.0"
+  },
+  "devDependencies": {
+    "browserify": "~10.2.4",
+    "babelify": "~6.1.2",
+    "watchify": "^3.3.1"
+  }
+}
