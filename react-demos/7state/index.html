@@ -12,7 +12,7 @@
 	     		getInitialState: function() {
 	     			return {liked: false};
 	     		},
-
+	     		// this.props 表示那些一旦定义，就不再改变的特性，而 this.state 是会随着用户互动而产生变化的特性。
 	     		handleClick: function(event) {
 	     			this.setState({liked: !this.state.liked});
 	     		},
