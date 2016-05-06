@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html>
+  	<head>
+	    <script src="../build/react.js"></script>
+	    <script src="../build/react-dom.js"></script>
+	    <script src="../build/browser.min.js"></script>
+  	</head>
+  	<body>
+	  	 <div id="example"></div>
+	     <script type="text/babel">
+	     // 表单
+	     	var MyInput = React.createClass({
+	     		getInitialState: function() {
+	     			return {text: 'Hello'};
+	     		},
+	     		// this.props 表示那些一旦定义，就不再改变的特性，而 this.state 是会随着用户互动而产生变化的特性。
+	     		handleChange: function(event) {
+	     			this.setState({text: event.target.value});
+	     		},
+
+	     		render: function () {
+	     			var text = this.state.text;
+
+	     			return (
+	     				<div>
+	     					<input type="text" onChange={this.handleChange} />
+	     					<p>{text}</p>
+	     				</div>
+	     			)
+	     		}
+	     	})
+
+	     	ReactDOM.render(
+	     		<MyInput />,
+	     		document.getElementById('example')
+	     	)
+	  	 </script>
+  	</body>
+</html>
